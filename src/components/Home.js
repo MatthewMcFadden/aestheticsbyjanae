@@ -4,8 +4,7 @@ import '../index.css';
 function Home () {
   return (
     <main>
-      {/* Hero Section */}
-      
+      <h1>Hello World!</h1>      
     </main>
   )
 }
