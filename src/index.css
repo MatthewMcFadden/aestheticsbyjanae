@@ -5,9 +5,6 @@
   --secondary-color: #947a27;
   --dark-color: rgb(41, 41, 41);
 
-  --accent-color1: #e85d87;  
-  --accent-color2: orange;
-
   /* Custom Fonts */
   --ff-primary: 'Raleway', 'Times New Roman', sans-serif;
   --ff-accent: 'Playfair Display', 'Times New Roman', serif;
@@ -27,48 +24,212 @@
   overflow-x: hidden;
 }
 
-
-/* W3 Schools template. Needs revamped. */
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
+section {
+  position: relative;
+  width: 100%;
 }
 
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+
+/* Navbar */
+nav {
   background-size: cover;
+  background-position: 80%;
+  background-image: linear-gradient(var(--primary-color), var(--secondary-color));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  top: 0;
+  z-index: 9999;
 }
 
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url('./assets/img/hero.jpg');
-  min-height: 100%;
+.container {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
 }
 
-/* Second image (Portfolio) */
-/* .bgimg-2 {
-  background-image: url("/w3images/parallax2.jpg");
-  min-height: 400px;
-} */
+.container a {
+  color: var(--dark-color);
+  text-decoration: none;
+  font-size: 1.25rem;
+  margin: 0rem 0.625rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
 
-/* Third image (Contact) */
-/* .bgimg-3 {
-  background-image: url("/w3images/parallax3.jpg");
-  min-height: 400px;
-} */
+.social {
+  padding: 4rem;
+}
 
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
+.btn {
+  border-radius: 1.5rem;
+  border: 2px solid var(--dark-color);
+  background-color: var(--primary-color);
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0.625rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+  cursor: pointer;
+}
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
+.btn:hover {
+  background-color: var(--dark-color);
+  border: 2px solid black;
+  color: white;
+}
+
+
+/* Hero Section */
+#hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./assets/img/hero.jpg');  
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 3rem;
+  text-shadow: 1px 1px 10px rgb(0 0 0 / 50%);
+  text-transform: capitalize;
+}
+
+
+/* About */
+.section-title {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  padding-top: 24px;
+  border-bottom: 4px solid;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 0 auto 35px auto;
+  width: 40%;
+}
+
+.intro {
+  display: block;
+  margin: 3rem auto;
+  width: 70%;
+  background-color: var(--accent-color1);
+}
+
+.intro p {
+  margin: 0 auto;
+  color: var(--ff-secondary);
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+
+/* Services */
+#services {
+  background: url(./assets/img/leopard-bg.jpg);
+  min-height: 60vh;
+}
+
+.services {  
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 15px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background: var(--dark-color);
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+
+.card:before, .card:after {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: var(--dark-color);
+  transition: 0.5s;
+  z-index:-1;
+}
+
+.card:hover:before {
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+}
+
+.card:hover:after {
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+}
+
+.card .imgBx {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.card:hover .imgBx {
+  bottom: 80px;
+}
+
+.card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .content {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 60px;
+  text-align: center;
+}
+
+.card .content h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 20px;
+  color: #777;
+  text-transform: uppercase;
+} 
+
+.card .content h2 span {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--secondary-color);
+  display: block;
+  margin-top: 5px;
+}
+
+.services-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }

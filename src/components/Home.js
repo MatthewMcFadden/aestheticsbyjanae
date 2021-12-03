@@ -1,11 +1,20 @@
 import React from 'react';
 import '../index.css';
 
+import About from '../components/About';
+import Services from '../components/Services';
+
 function Home () {
   return (
     <main>
-      <h1>Hello World!</h1>      
-    </main>
+      <section id="hero" className="hero">
+        <div>
+          <h1>Aesthetics by Janae! PLACEHOLDER</h1>
+        </div>        
+      </section>
+      <About/>
+      <Services/>
+    </main>    
   )
 }
 
