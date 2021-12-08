@@ -7,7 +7,7 @@ function Navbar () {
   return (
     <header>
       <nav>   
-        <div className="container circleBehind">
+        <div className="navbar">
           <a href="#about">
             Services
           </a>

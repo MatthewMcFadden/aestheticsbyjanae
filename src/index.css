@@ -1,8 +1,8 @@
 :root {
   /* Custom Colors */
-  --primary-color: #7f6921;
+  --primary-color: #b69517;
     /* lighter gold */
-  --secondary-color: #947a27;
+  --secondary-color: #614b00;
   --dark-color: rgb(41, 41, 41);
 
   /* Custom Fonts */
@@ -34,7 +34,7 @@ section {
 nav {
   background-size: cover;
   background-position: 80%;
-  background-image: linear-gradient(var(--primary-color), var(--secondary-color));
+  background-image: url(./assets/img/hero.jpg);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -42,22 +42,59 @@ nav {
   z-index: 9999;
 }
 
-.container {
+.navbar {
   display: flex;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 0;
   text-align: center;
 }
 
-.container a {
-  color: var(--dark-color);
+.navbar a {
+  color: var(--primary-color);
   text-decoration: none;
   font-size: 1.25rem;
-  margin: 0rem 0.625rem;
+  margin: 0rem 1rem;
   padding: 0.5rem 1rem;
   position: relative;
   z-index: 0;
   cursor: pointer;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navbar:hover a {
+  transform: scale(1.1);
+  opacity: 0.8;
+  filter: blur(2px);
+}
+
+.navbar a:hover {
+  transform: scale(1.5);
+  opacity: 1;
+  filter: blur(0);
+  color: var(--primary-color);
+}
+
+.navbar a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fc80be;
+  transition: transform 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.navbar a:hover:before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+  color: var(--primary-color);
 }
 
 .social {
@@ -89,10 +126,9 @@ nav {
 /* Hero Section */
 #hero {
   width: 100%;
-  height: 100vh;
+  height: 85vh;
   background-image: url('./assets/img/hero.jpg');  
   background-size: cover;
-  background-position: center;
   position: relative;
 }
 
@@ -107,7 +143,7 @@ nav {
 /* About */
 .section-title {
   font-size: 3rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   padding-top: 24px;
   border-bottom: 4px solid;
   padding-bottom: 20px;

@@ -7,10 +7,7 @@ import Services from '../components/Services';
 function Home () {
   return (
     <main>
-      <section id="hero" className="hero">
-        <div>
-          <h1>Aesthetics by Janae! PLACEHOLDER</h1>
-        </div>        
+      <section id="hero" className="hero">     
       </section>
       <About/>
       <Services/>
