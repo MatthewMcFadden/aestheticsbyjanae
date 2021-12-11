@@ -6,8 +6,11 @@ import { Link } from "react-router-dom";
 function Navbar () {
   return (
     <header>
-      <nav>   
-        <div className="navbar">
+      <nav>  
+        <h1>
+          <a href="/">Aesthetics by Janae</a>
+        </h1> 
+        <div className="navbar">          
           <a href="#about">
             Services
           </a>
