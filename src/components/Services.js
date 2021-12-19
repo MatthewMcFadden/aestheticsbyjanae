@@ -1,53 +1,38 @@
-import React from 'react';
-import Placeholder from '../assets/img/161431962_104724801704521_7397517850999387659_n.jpg';
+import React, { Component } from 'react';
 import '../index.css';
 
-function Services() {
-  return(
-    <section id="services">
-      <div>
-        <h2 className="section-title">Services</h2>
-      </div>
-
-      {/* cookies */}
-      <div className="services">
-        <article className="card">
-          <div className="imgBx">
-            <img src={ Placeholder } alt="placeholder"/>
+export default class Services extends Component {
+  render() {
+    let ABJData = this.props.ABJData;
+    return (
+      <section id="services">
+        <div>
+          <h2 className="section-title service-header">Services</h2>
+          <div className="services">
+          {
+            ABJData.services && ABJData.services.map((item)=>{
+              return (
+                <article className="card">
+                  <div className="imgBx">
+                    <img src={`${item.imgurl}`} alt={`${item.imgalt}`}/>
+                  </div>
+                  <div className="content">
+                    <h2>{item.name}</h2>
+                    <p>{item.description}</p>
+                  </div>
+                </article> 
+              )
+            })
+          }
           </div>
-          <div className="content">
-            <h2>Skin Stretchers<br/><span>Coming Soon</span></h2>
-          </div>
-        </article>        
+        </div>
 
-        {/* drinks */}
-        <article className="card">
-          <div className="imgBx">
-            <img src={ Placeholder } alt="placeholder"/>
-          </div>
-          <div className="content">
-            <h2>Face Owies<br/><span>Coming Soon</span></h2>
-          </div>                 
-        </article>
-
-        {/* pretzels */}
-        <article className="card">
-          <div className="imgBx">
-            <img src={ Placeholder } alt="placeholder"/>
-          </div>
-          <div className="content">
-            <h2>Lip Poofers<span>Coming Soon</span></h2>
-          </div>                 
-        </article>
-      </div>
-
-      <div className="services-btn">
-        <a href="crispnow.com" class="btn">
-          Schedule A Time
-        </a>
-      </div>
-    </section>
-  )
+        <div className="services-btn">
+          <a href="crispnow.com" class="btn">
+            Schedule A Time
+          </a>
+        </div>
+      </section>
+    );
+  }
 }
-
-export default Services;

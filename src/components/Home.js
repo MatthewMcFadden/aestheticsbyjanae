@@ -3,6 +3,8 @@ import '../index.css';
 
 import About from '../components/About';
 import Services from '../components/Services';
+import Reviews from '../components/Reviews';
+import ABJData from '../ABJData';
 
 function Home () {
   return (
@@ -10,7 +12,8 @@ function Home () {
       <section id="hero" className="hero">     
       </section>
       <About/>
-      <Services/>
+      <Services ABJData={ABJData}/>
+      <Reviews ABJData={ABJData}/>
     </main>    
   )
 }

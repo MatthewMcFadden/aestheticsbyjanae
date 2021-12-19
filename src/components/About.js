@@ -5,7 +5,7 @@ function About() {
   return (
     <section id="about">
       <div className="intro">
-        <h1 className="section-title">Aesthetics by Janae</h1>
+        <h1 className="section-title">Aesthetics by JaNae</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus magna magna, vitae sollicitudin purus tincidunt sed. Nam elementum porttitor ipsum, sit amet congue erat facilisis in. Nullam ut sem eget nulla semper vulputate a sed eros. Suspendisse et volutpat lacus, eget scelerisque nunc. Ut accumsan mauris a feugiat condimentum. Aliquam varius aliquet feugiat. Praesent maximus metus urna, vel vulputate sem bibendum non.
         </p>

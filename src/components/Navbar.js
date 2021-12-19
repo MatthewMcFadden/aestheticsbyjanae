@@ -8,7 +8,7 @@ function Navbar () {
     <header>
       <nav>  
         <h1>
-          <a href="/">Aesthetics by Janae</a>
+          <a href="/">Aesthetics by JaNae</a>
         </h1> 
         <div className="navbar">          
           <a href="#about">
